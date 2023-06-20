@@ -1,12 +1,10 @@
-//
-// Base styles
-//
+
 
 .card {
   position: relative;
   display: flex;
   flex-direction: column;
-  min-width: 0; // See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
+  min-width: 0;
   height: $card-height;
   word-wrap: break-word;
   background-color: $card-bg;
@@ -34,8 +32,7 @@
     }
   }
 
-  // Due to specificity of the above selector (`.card > .list-group`), we must
-  // use a child selector here to prevent double borders.
+  
   > .card-header + .list-group,
   > .list-group + .card-footer {
     border-top: 0;
@@ -43,12 +40,9 @@
 }
 
 .card-body {
-  // Enable `flex-grow: 1` for decks and groups so that card blocks take up
-  // as much space as possible, ensuring footers are aligned to the bottom.
+ bottom.
   flex: 1 1 auto;
-  // Workaround for the image size bug in IE
-  // See: https://github.com/twbs/bootstrap/pull/28855
-  min-height: 1px;
+
   padding: $card-spacer-x;
   color: $card-color;
 }
@@ -76,13 +70,11 @@
   }
 }
 
-//
-// Optional textual caps
-//
+
 
 .card-header {
   padding: $card-spacer-y $card-spacer-x;
-  margin-bottom: 0; // Removes the default margin-bottom of <hN>
+  margin-bottom: 0; 
   color: $card-cap-color;
   background-color: $card-cap-bg;
   border-bottom: $card-border-width solid $card-border-color;
@@ -103,10 +95,6 @@
   }
 }
 
-
-//
-// Header navs
-//
 
 .card-header-tabs {
   margin-right: -$card-spacer-x / 2;
@@ -149,7 +137,7 @@
 }
 
 
-// Card deck
+
 
 .card-deck {
   .card {
@@ -173,14 +161,8 @@
 }
 
 
-//
-// Card groups
-//
-
 .card-group {
-  // The child selector allows nested `.card` within `.card-group`
-  // to display properly.
-  > .card {
+  > .card
     margin-bottom: $card-group-margin;
   }
 
@@ -199,19 +181,18 @@
         border-left: 0;
       }
 
-      // Handle rounded corners
+      
       @if $enable-rounded {
         &:not(:last-child) {
           @include border-right-radius(0);
 
           .card-img-top,
           .card-header {
-            // stylelint-disable-next-line property-disallowed-list
-            border-top-right-radius: 0;
+            border-top-right-radius: (0)
+              
           }
           .card-img-bottom,
           .card-footer {
-            // stylelint-disable-next-line property-disallowed-list
             border-bottom-right-radius: 0;
           }
         }
@@ -221,12 +202,11 @@
 
           .card-img-top,
           .card-header {
-            // stylelint-disable-next-line property-disallowed-list
+            
             border-top-left-radius: 0;
           }
           .card-img-bottom,
           .card-footer {
-            // stylelint-disable-next-line property-disallowed-list
             border-bottom-left-radius: 0;
           }
         }
@@ -236,9 +216,6 @@
 }
 
 
-//
-// Columns
-//
 
 .card-columns {
   .card {
@@ -257,12 +234,6 @@
     }
   }
 }
-
-
-//
-// Accordion
-//
-
 .accordion {
   overflow-anchor: none;
 
